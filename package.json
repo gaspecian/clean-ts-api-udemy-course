@@ -10,7 +10,9 @@
     "test:integration": "npm test -- --watch -c jest-integration-config.js",
     "test:staged": "npm test --findRelatedTests",
     "test:ci": "npm test -- --coverage",
-    "start": "sucrase-node src/main/server.ts"
+    "start": "sucrase-node src/main/server.ts",
+    "lint": "lint-staged",
+    "prepare": "husky install && lint-staged install"
   },
   "keywords": [],
   "author": "",
@@ -33,7 +35,7 @@
     "git-commit-msg-linter": "^3.2.6",
     "husky": "^7.0.1",
     "jest": "^27.0.6",
-    "lint-staged": "^11.1.2",
+    "lint-staged": "^11.2.6",
     "sucrase": "^3.20.1",
     "supertest": "^6.1.5",
     "ts-jest": "^27.0.4",
